@@ -36,7 +36,7 @@ function Timer ()
     } 
     timer();
 }
-Timer();
+
 
 function ScoreLayer()
 {
@@ -47,4 +47,12 @@ function ScoreLayer()
 function BtnAgain()
 {
     location.reload();
+}
+
+function BtnStart()
+{
+    document.getElementById('main').style.display = 'none';
+    document.getElementById('btn').style.visibility = 'visible';
+    document.getElementById('field').style.display = 'flex';
+    Timer();
 }

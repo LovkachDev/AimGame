@@ -3,11 +3,18 @@ body
 {
     margin: 0px 0px 0px 0px;
     font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    height: 100%;
+    width: 100vh;
+    height: 100vh;
+    background: linear-gradient(45deg, #00c6fb, #005bea);
+}
+:active, :hover, :focus 
+{
+    outline: 0;
+    outline-offset: 0;
 }
 .button
 {
+    visibility: hidden;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -17,7 +24,7 @@ body
     top:200px;
     width:50px;
     height: 50px;
-    background-color: rgb(84, 130, 230);
+    background-color: #fff;
     cursor: pointer;
     user-select: none;
     border-radius: 100px;
@@ -36,7 +43,7 @@ body
     height: auto;
     font-size: 30px;
     font-weight: 900;
-    color: rgb(84, 130, 230);
+    color: #fff;
 }
 .otpt
 {
@@ -51,11 +58,12 @@ body
     height: auto;
     font-size: 30px;
     font-weight: 900;
-    color: rgb(84, 130, 230);
+    color: #fff;
 }
+/*rgb(84, 130, 230)*/
 .field
 {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     position: absolute;
@@ -71,7 +79,7 @@ body
     left:0px;
     width:100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.80);
+    background-color: rgba(0, 0, 0, 0.70);
     z-index: 10;
 }
 .score__result__area
@@ -100,11 +108,98 @@ body
     cursor: pointer;
     border-radius: 5px;
 }
+.main
+{
+    display: block;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+    z-index: 10;
+}
+.main__prewiew__block
+{
+    flex-direction: column  ;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:40%;
+    margin:auto;
+    width:70%;
+    height: 100px;
+}
+.main__prewiew
+{
+    text-align: center;
+    position: relative;
+    margin:auto;
+    width:auto;
+    height: auto;
+    font-size: 70px;
+    font-weight: 900;
+    color: rgb(84, 130, 230);
+}
+.main__disc
+{
+    text-align: center;
+    position: relative;
+    top:20px;
+    margin:auto;
+    width:auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+.main__btn
+{
+    align-self: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:150px;
+    padding: 10px;
+    color:#fff;
+    background-color:rgb(84, 130, 230); 
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
 @media(max-width:1400px)
 {
     .otpt
     {
         font-size: 40px;
+    }
+}
+@media(max-width:1100px)
+{
+    .main__prewiew
+    {
+        font-size: 60px;
+    }
+    .main__disc
+    {
+        font-size: 16px;
+    }
+}
+@media(max-width:600px)
+{
+    .main__prewiew__block
+    {
+        width:auto;
     }
 }
 @media(max-width:550px)
@@ -121,5 +216,16 @@ body
     .timer
     {
         font-size: 25px;
+    }
+}
+@media(max-width:420px)
+{
+    .main__prewiew
+    {
+        font-size:45px;
+    }
+    .main__disc
+    {
+        font-size: 14px;
     }
 }

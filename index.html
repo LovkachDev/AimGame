@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="button" id = 'btn' onclick = 'Click();' ></div>
-    <div class="field">
-        <div class="output">
+    <div class="field" id = 'field'>
+        <div class="output" >
             Ваш счет: <span id = 'otpt'>0</span>
         </div>
-        <div class="timer">
+        <div class="timer" >
             Осталось секунд: <span class = 'time' id = 'timer'>0</span>
         </div>
     </div>
@@ -24,6 +24,19 @@
             </div>
             <div class="btn__again" onclick = 'BtnAgain();'>
                 Заново
+            </div>
+        </div>
+    </div>
+    <div class="main" id = 'main'>
+        <div class="main__prewiew__block">
+            <div class="main__prewiew">
+                GameClicker
+            </div>
+            <div class="main__disc">
+                - Мини игра стрелялки , в которой тебе в течении 30 секунд нужно набить лучший результат
+            </div>
+            <div class="main__btn" onclick = 'BtnStart();'>
+                Начать
             </div>
         </div>
     </div>
