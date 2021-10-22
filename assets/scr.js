@@ -4,7 +4,8 @@ let result;
 
 result = score;
 
-scrW  = window.innerWidth;
+scrW  = window.innerWidth - 100;
+
 function Click ()
 {
     score++;
@@ -15,7 +16,6 @@ function Click ()
     document.getElementById('otpt').innerHTML = score;
     document.getElementById("btn").style.left = pxX;
     document.getElementById("btn").style.top = pxY;
-    AudioClick();
 }
 
 
