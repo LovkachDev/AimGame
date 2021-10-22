@@ -15,6 +15,7 @@ function Click ()
     document.getElementById('otpt').innerHTML = score;
     document.getElementById("btn").style.left = pxX;
     document.getElementById("btn").style.top = pxY;
+    AudioClick();
 }
 
 
@@ -55,4 +56,23 @@ function BtnStart()
     document.getElementById('btn').style.visibility = 'visible';
     document.getElementById('field').style.display = 'flex';
     Timer();
+}
+
+
+
+function GreenPlay()
+{
+    document.getElementById('btn').style.background = '#b1f55d';
+}
+function OrangePlay()
+{
+    document.getElementById('btn').style.background = '#f5745d';
+}
+function PurplePlay()
+{
+    document.getElementById('btn').style.background = '#ae5df5';
+}
+function RedPlay()
+{
+    document.getElementById('btn').style.background = '#fc5858';
 }
