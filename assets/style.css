@@ -7,7 +7,12 @@ body
     height: 100vh;
     background-color: #005bea;
     overflow: hidden;
+    -ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none; 
 }
+
 :active, :hover, :focus 
 {
     outline: 0;

@@ -31,7 +31,7 @@
     <div class="main" id = 'main'>
         <div class="main__prewiew__block">
             <div class="main__prewiew">
-                GameClicker
+                AimClicker
             </div>
             <div class="main__disc">
                 - Мини игра стрелялки , в которой тебе в течении 30 секунд нужно набить лучший результат
@@ -66,7 +66,14 @@
             </div>
         </div>
     </div>
-
+    <script type="text/javascript">
+        document.ondragstart = noselect;
+        // запрет на перетаскивание
+        document.onselectstart = noselect;
+        // запрет на выделение элементов страницы
+        document.oncontextmenu = noselect;
+            
+    </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
