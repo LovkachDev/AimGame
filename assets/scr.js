@@ -105,7 +105,6 @@ function CloseModal()
     document.getElementById('buy').style.display = 'none';
 }
 
-
 function BuyPlayer()
 {
     check = localStorage.getItem("CurrentBalance");

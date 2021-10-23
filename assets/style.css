@@ -54,10 +54,12 @@ a
     font-size: 30px;
     font-weight: 900;
     color: #fff;
+    opacity: .6;
 }
 .otpt
 {
     font-size: 50px;
+    opacity: 1;
 }
 .timer
 {
@@ -69,6 +71,7 @@ a
     font-size: 30px;
     font-weight: 900;
     color: #fff;
+    opacity: .6;
 }
 /*rgb(84, 130, 230)*/
 .field
@@ -209,6 +212,7 @@ a
     font-size: 15px;
     line-height: 18px;
     color: #5482E6;
+    cursor: pointer;
 
 }
 .buy__block__close
