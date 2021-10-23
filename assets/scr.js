@@ -1,10 +1,9 @@
-let score =  0 ;
-
-let result;
-
-result = score;
 
 scrW  = window.innerWidth - 100;
+
+let score = 0;
+
+let CurrentBalance = 0;
 
 function Click ()
 {
@@ -16,7 +15,19 @@ function Click ()
     document.getElementById('otpt').innerHTML = score;
     document.getElementById("btn").style.left = pxX;
     document.getElementById("btn").style.top = pxY;
+
+    let CurrentBalance = localStorage.getItem('CurrentBalance');
+    
+    CurrentBalance ++;
+
+    localStorage.setItem('CurrentBalance', CurrentBalance);
+
+    document.getElementById('balance').innerHTML = localStorage.getItem('CurrentBalance');
+    
 }
+
+
+
 
 
 function Timer ()
@@ -75,4 +86,49 @@ function PurplePlay()
 function RedPlay()
 {
     document.getElementById('btn').style.background = '#fc5858';
+}
+function DefaultPlay()
+{
+    document.getElementById('btn').style.background = '#fff';
+}
+
+
+Curr = localStorage.getItem("CurrentBalance");
+
+
+function OpenModal()
+{
+    document.getElementById('buy').style.display = 'flex';
+}
+function CloseModal()
+{
+    document.getElementById('buy').style.display = 'none';
+}
+
+
+function BuyPlayer()
+{
+    check = localStorage.getItem("CurrentBalance");
+    if ( check < 250 )
+    {
+        document.getElementById("error").innerHTML = "Недостаточно баланса";
+    }
+    else
+    {
+        red = document.getElementById('btn').style.background = '#fc5858';
+        localStorage.setItem("RedPlayer" , red);
+        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 250)
+        CloseModal();
+    }
+}
+let RedPlayer = localStorage.getItem("RedPlayer");
+
+
+if (RedPlayer == '#fc5858')
+{
+    RedPlay();
+}
+else
+{
+    DefaultPlay();
 }

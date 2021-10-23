@@ -15,10 +15,25 @@
             Ваш счет: <span id = 'otpt'>0</span>
         </div>
         <div class="timer" >
-            Осталось секунд: <span class = 'time' id = 'timer'>0</span>
+            Осталось секунд: <span class = 'time' id = 'timer'>${balance}</span>
         </div>
     </div>
     <div class="score" id = 'stats'>
+        <div class="balance">
+            <span class = 'blc'>Баланс: <span id = 'balance'>0</span></span>
+        </div>
+        <div class="store">
+            <div class="store__prew">
+                Прокачай свою игру:
+            </div>
+            <div class="store__col">
+                <div class="store__row"  onclick="OpenModal();">
+                    <div class="store__row__item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="score__result__area">
             <div class="otpt">
                 Ваш счет: <span id = 'result'></span>
@@ -40,7 +55,10 @@
                 Начать
             </div>
         </div>
-        <div class="choice">
+        <div class="developer">
+            <a href = 'https://t.me/lovkach404'>Связаться с разработчиком</a>
+        </div>
+        <!--<div class="choice">
             <div class="choice__col">
                 <div class="choice__row">
                     <div class="choice__row__color green" onclick = 'GreenPlay();'>
@@ -62,9 +80,31 @@
 
                     </div>
                 </div>
+            
+            </div>-->
 
-            </div>
+
+            
         </div>
+        
+    </div>
+    <div class="buy__layer" id = 'buy'>
+           <div class="buy__block">
+                <div class="buy__block__prewiew">
+                    Вы собираетесь 
+                    приобрести :
+                </div>
+                <div class="buy__block__item" style="width: 45px;height: 45px;"></div>
+                <div class="buy__block__error" id = 'error'>
+                    
+                </div>
+                <div class="buy__block__button" onclick="BuyPlayer();">
+                    250 баллов
+                </div>
+                <div class="buy__block__close" onclick="CloseModal();">
+                    <img src="https://i.ibb.co/7tZSSK4/image.png" width="20" height="20">
+                </div>
+           </div>     
     </div>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
