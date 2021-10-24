@@ -50,6 +50,7 @@ let arr = [ "vova" , {bg : "linear-gradient(to right, #f00, #ffa500, #ff0, #0080
             "lovkach" , {bg : "linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706)"} ,
             "уник123" , {bg : "url(https://i.ibb.co/N9K63Sd/image.png)"} ,
             "lierow" , {bg : "url(https://i.ibb.co/YTWtpbc/image.png)"} ,
+            "slavaukraine" , {bg : "url(https://i.ibb.co/X3td9P4/image.png)"} ,
             "standa1one" , {bg : "url(https://i.ibb.co/bzT6VN9/animation-gif.gif)"},
             "mambitchh" , {bg : "url(https://i.ibb.co/FKV3g2g/image.png)"}
         ];
@@ -64,7 +65,6 @@ function Promo()
         index = arr.indexOf(promo.value);
         Add = index + 1;
         ColorValue = arr[Add].bg;
-        Player = localStorage.getItem("Player");
         Button = document.getElementById('btn').style.background = ColorValue;
         localStorage.setItem('Player' , Button );
         document.getElementById('promo').style.borderBottom = '2px solid #8eff04';
