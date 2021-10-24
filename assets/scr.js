@@ -25,31 +25,6 @@ function Click ()
     document.getElementById('balance').innerHTML = localStorage.getItem('CurrentBalance');
     
 }
-
-
-
-
-
-function Timer ()
-{
-    let count = 30;
-
-    let counter=setInterval(timer, 1000);
-
-    function timer()
-    {
-    count=count-1;
-    if (count <= 0)
-    {
-        clearInterval(counter);
-        ScoreLayer();
-    }
-    document.getElementById("timer").innerHTML=count; 
-    } 
-    timer();
-}
-
-
 function ScoreLayer()
 {
     document.getElementById('stats').style.display = 'block';
@@ -70,64 +45,31 @@ function BtnStart()
 }
 
 
+let arr = [ "vova" , {bg : "-webkit-linear-gradient(90deg, #00ff00,#ff9100)"} ,
+            "журкин" , {bg : "-webkit-linear-gradient(45deg, #fb8a61,#f74d72,#d2089a,#7029c9)"} , 
+            "lol" , {bg : "url(https://i.ibb.co/rktfQc4/image.png)"} ,
+            "balik" , {balance : "1000"}];
 
-function GreenPlay()
-{
-    document.getElementById('btn').style.background = '#b1f55d';
-}
-function OrangePlay()
-{
-    document.getElementById('btn').style.background = '#f5745d';
-}
-function PurplePlay()
-{
-    document.getElementById('btn').style.background = '#ae5df5';
-}
-function RedPlay()
-{
-    document.getElementById('btn').style.background = '#fc5858';
-}
-function DefaultPlay()
-{
-    document.getElementById('btn').style.background = '#fff';
-}
+let promo = document.getElementById('promo');
 
 
-Curr = localStorage.getItem("CurrentBalance");
-
-
-function OpenModal()
+function Promo()
 {
-    document.getElementById('buy').style.display = 'flex';
-}
-function CloseModal()
-{
-    document.getElementById('buy').style.display = 'none';
-}
-
-function BuyPlayer()
-{
-    check = localStorage.getItem("CurrentBalance");
-    if ( check < 250 )
+    if(arr.includes(promo.value))
     {
-        document.getElementById("error").innerHTML = "Недостаточно баланса";
+        index = arr.indexOf(promo.value);
+        Add = index + 1;
+        ColorValue = arr[Add].bg;
+        Player = localStorage.getItem("Player");
+        Button = document.getElementById('btn').style.background = ColorValue;
+        localStorage.setItem('Player' , Button );
+        document.getElementById('promo').style.borderBottom = '2px solid #8eff04';
     }
     else
     {
-        red = document.getElementById('btn').style.background = '#fc5858';
-        localStorage.setItem("RedPlayer" , red);
-        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 250)
-        CloseModal();
+        document.getElementById('promo').style.borderBottom = '2px solid #fc5858';
+        promo.value = 'Неправильный код';
     }
 }
-let RedPlayer = localStorage.getItem("RedPlayer");
 
 
-if (RedPlayer == '#fc5858')
-{
-    RedPlay();
-}
-else
-{
-    DefaultPlay();
-}

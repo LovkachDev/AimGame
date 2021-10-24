@@ -26,10 +26,37 @@
             <div class="store__prew">
                 Прокачай свою игру:
             </div>
-            <div class="store__col">
-                <div class="store__row"  onclick="OpenModal();">
-                    <div class="store__row__item">
+            <div class="store__col" >
+                <div class="store__row"  onclick="OpenRedModal();">
+                    <div class="store__row__item red">
 
+                    </div>
+                    <div class="store__row__button">
+                        250
+                    </div>
+                </div>
+                <div class="store__row"  onclick="OpenGreenModal();">
+                    <div class="store__row__item green">
+
+                    </div>
+                    <div class="store__row__button">
+                        250
+                    </div>
+                </div>
+                <div class="store__row"  onclick="OpenPurpleModal();">
+                    <div class="store__row__item purple">
+
+                    </div>
+                    <div class="store__row__button">
+                        250
+                    </div>
+                </div>
+                <div class="store__row"  onclick="OpenGradOneModal();">
+                    <div class="store__row__item grad__one">
+
+                    </div>
+                    <div class="store__row__button">
+                        1000
                     </div>
                 </div>
             </div>
@@ -40,6 +67,18 @@
             </div>
             <div class="btn__again" onclick = 'BtnAgain();'>
                 Заново
+            </div>
+        </div>
+        <div class="promo">
+            <div class="promo__prew">
+                Промокод
+            </div>
+            <div class="promo__disc">
+                *Получения привелегий
+            </div>
+            <input placeholder="Введите код" class = 'promo__input' id = 'promo' >
+            <div class="promo__button" onclick="Promo();">
+                Активировать
             </div>
         </div>
     </div>
@@ -88,17 +127,17 @@
         </div>
         
     </div>
-    <div class="buy__layer" id = 'buy'>
+    <div class="buy__layer" id = 'BuyRed'>
            <div class="buy__block">
                 <div class="buy__block__prewiew">
                     Вы собираетесь 
                     приобрести :
                 </div>
-                <div class="buy__block__item" style="width: 45px;height: 45px;"></div>
-                <div class="buy__block__error" id = 'error'>
+                <div class="buy__block__item red" id = 'buy_item_red' style="width: 45px;height: 45px;"></div>
+                <div class="buy__block__error" id = 'errorRed'>
                     
                 </div>
-                <div class="buy__block__button" onclick="BuyPlayer();">
+                <div class="buy__block__button" onclick="BuyRedPlayer();">
                     250 баллов
                 </div>
                 <div class="buy__block__close" onclick="CloseModal();">
@@ -106,6 +145,61 @@
                 </div>
            </div>     
     </div>
+    <div class="buy__layer" id = 'BuyGreen'>
+        <div class="buy__block">
+             <div class="buy__block__prewiew">
+                 Вы собираетесь 
+                 приобрести :
+             </div>
+             <div class="buy__block__item green" id = 'buy_item_green' style="width: 45px;height: 45px;"></div>
+             <div class="buy__block__error" id = 'errorGreen'>
+                 
+             </div>
+             <div class="buy__block__button" onclick="BuyGreenPlayer();">
+                 250 баллов
+             </div>
+             <div class="buy__block__close" onclick="CloseModal();">
+                 <img src="https://i.ibb.co/7tZSSK4/image.png" width="20" height="20" style = 'cursor: pointer;'>
+             </div>
+        </div>     
+    </div>
+    <div class="buy__layer" id = 'BuyPurple'>
+        <div class="buy__block">
+             <div class="buy__block__prewiew">
+                 Вы собираетесь 
+                 приобрести :
+             </div>
+             <div class="buy__block__item purple" id = 'buy_item_purple' style="width: 45px;height: 45px;"></div>
+             <div class="buy__block__error" id = 'errorPurple'>
+                 
+             </div>
+             <div class="buy__block__button" onclick="BuyPurplePlayer();">
+                 250 баллов
+             </div>
+             <div class="buy__block__close" onclick="CloseModal();">
+                 <img src="https://i.ibb.co/7tZSSK4/image.png" width="20" height="20" style = 'cursor: pointer;'>
+             </div>
+        </div>     
+    </div>
+    <div class="buy__layer" id = 'BuyGradOne'>
+        <div class="buy__block">
+             <div class="buy__block__prewiew">
+                 Вы собираетесь 
+                 приобрести :
+             </div>
+             <div class="buy__block__item grad__one" id = 'buy_item_grad_one' style="width: 45px;height: 45px;"></div>
+             <div class="buy__block__error" id = 'errorGradOne'>
+                 
+             </div>
+             <div class="buy__block__button" onclick="BuyGradOnePlayer();">
+                 1000 баллов
+             </div>
+             <div class="buy__block__close" onclick="CloseModal();">
+                 <img src="https://i.ibb.co/7tZSSK4/image.png" width="20" height="20" style = 'cursor: pointer;'>
+             </div>
+        </div>     
+    </div>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -120,6 +214,8 @@
  </script>
  <noscript><div><img src="https://mc.yandex.ru/watch/86055614" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
+ <script src = 'assets/store.js'></script>
+<script src = 'assets/timer.js'></script>
 <script src = 'assets/scr.js'></script>
 </body>
 </html>
