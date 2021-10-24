@@ -45,10 +45,14 @@ function BtnStart()
 }
 
 
-let arr = [ "vova" , {bg : "-webkit-linear-gradient(90deg, #00ff00,#ff9100)"} ,
+let arr = [ "vova" , {bg : "linear-gradient(to right, #f00, #ffa500, #ff0, #008000, #00f, #4b0082, #ee82ee)"} ,
             "журкин" , {bg : "-webkit-linear-gradient(45deg, #fb8a61,#f74d72,#d2089a,#7029c9)"} , 
-            "lol" , {bg : "url(https://i.ibb.co/rktfQc4/image.png)"} ,
-            "balik" , {balance : "1000"}];
+            "lovkach" , {bg : "linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706)"} ,
+            "уник123" , {bg : "url(https://i.ibb.co/N9K63Sd/image.png)"} ,
+            "lierow" , {bg : "url(https://i.ibb.co/YTWtpbc/image.png)"} ,
+            "standa1one" , {bg : "url(https://i.ibb.co/bzT6VN9/animation-gif.gif)"},
+            "mambitchh" , {bg : "url(https://i.ibb.co/FKV3g2g/image.png)"}
+        ];
 
 let promo = document.getElementById('promo');
 
@@ -71,5 +75,4 @@ function Promo()
         promo.value = 'Неправильный код';
     }
 }
-
 

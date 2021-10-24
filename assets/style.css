@@ -43,6 +43,9 @@ a
     justify-content: center;
     align-items: center;
     position: absolute;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     left:40%;
     top:200px;
     width:50px;
@@ -358,7 +361,7 @@ a
 }
 .main
 {
-    display:  block;
+    display: block;
     position: absolute;
     top:0px;
     left:0px;
