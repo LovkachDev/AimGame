@@ -1,7 +1,3 @@
-
-Curr = localStorage.getItem("CurrentBalance");
-
-
 function OpenRedModal()
 {
     document.getElementById('BuyRed').style.display = 'flex';
@@ -90,7 +86,6 @@ function BuyGradOnePlayer()
 }
 
 let Player = localStorage.getItem("Player");
-
 document.getElementById('btn').style.background = Player;
 
 

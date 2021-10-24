@@ -1,10 +1,6 @@
-
 scrW  = window.innerWidth - 100;
-
 let score = 0;
-
 let CurrentBalance = 0;
-
 function Click ()
 {
     score++;
@@ -30,12 +26,10 @@ function ScoreLayer()
     document.getElementById('stats').style.display = 'block';
     document.getElementById("result").innerHTML = score;
 }
- 
 function BtnAgain()
 {
     location.reload();
 }
-
 function BtnStart()
 {
     document.getElementById('main').style.display = 'none';
@@ -43,21 +37,17 @@ function BtnStart()
     document.getElementById('field').style.display = 'flex';
     Timer();
 }
-
-
 let arr = [ "vova" , {bg : "linear-gradient(to right, #f00, #ffa500, #ff0, #008000, #00f, #4b0082, #ee82ee)"} ,
             "журкин" , {bg : "-webkit-linear-gradient(45deg, #fb8a61,#f74d72,#d2089a,#7029c9)"} , 
             "lovkach" , {bg : "linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706)"} ,
-            "уник123" , {bg : "url(https://i.ibb.co/N9K63Sd/image.png)"} ,
-            "lierow" , {bg : "url(https://i.ibb.co/YTWtpbc/image.png)"} ,
-            "slavaukraine" , {bg : "url(https://i.ibb.co/X3td9P4/image.png)"} ,
-            "standa1one" , {bg : "url(https://i.ibb.co/bzT6VN9/animation-gif.gif)"},
-            "mambitchh" , {bg : "url(https://i.ibb.co/FKV3g2g/image.png)"}
+            "уник123" , {bg : "url(https://i.ibb.co/N9K63Sd/image.png)"} , //кот в кепке
+            "lierow" , {bg : "url(https://i.ibb.co/YTWtpbc/image.png)"} , // лицо мем
+            "slavaukraine" , {bg : "url(https://i.ibb.co/X3td9P4/image.png)"} , //украина
+            "standa1one" , {bg : "url(https://i.ibb.co/bzT6VN9/animation-gif.gif)"},// гиф сига
+            "mambitchh" , {bg : "url(https://i.ibb.co/FKV3g2g/image.png)"}, // зеленый чел
+            "csgo" , {bg : "url(https://i.ibb.co/fqvHWb6/image-removebg-preview-5.png)"} // зеленый чел
         ];
-
 let promo = document.getElementById('promo');
-
-
 function Promo()
 {
     if(arr.includes(promo.value))
