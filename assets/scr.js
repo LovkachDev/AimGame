@@ -40,7 +40,7 @@ function BtnStart()
 let arr = [ "vova" , {bg : "linear-gradient(to right, #f00, #ffa500, #ff0, #008000, #00f, #4b0082, #ee82ee)"} ,
             "журкин" , {bg : "-webkit-linear-gradient(45deg, #fb8a61,#f74d72,#d2089a,#7029c9)"} , 
             "lovkach" , {bg : "linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706)"} ,
-            "уник123" , {bg : "url(https://i.ibb.co/N9K63Sd/image.png)"} , //кот в кепке
+            "уник123" , {bg : "url(https://i.ibb.co/N9K63Sd/image.png)"} , { disc : "кота в кепке"} , //кот в кепке
             "1000" , {bg : "-webkit-linear-gradient(90deg, #ddee44,#ff4420)"} , 
             "lierow" , {bg : "url(https://i.ibb.co/YTWtpbc/image.png)"} , // лицо мем
             "slavaukraine" , {bg : "url(https://i.ibb.co/X3td9P4/image.png)"} , //украина
@@ -55,6 +55,7 @@ function Promo()
         index = arr.indexOf(promo.value);
         Add = index + 1;
         ColorValue = arr[Add].bg;
+        promo.value = "Промокод активирован, вы получили:" + arr[Add + 1].disc;
         Button = document.getElementById('btn').style.background = ColorValue;
         localStorage.setItem('Player' , Button );
         document.getElementById('promo').style.borderBottom = '2px solid #8eff04';

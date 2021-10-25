@@ -211,11 +211,11 @@ a
 {
     top:30px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-gap:10px;
     position: relative;
     height: 100px;
-    width: 290px;
+    width: 370px;
     cursor: pointer;
 }
 .store__row
@@ -356,11 +356,11 @@ a
 }
 .score
 {
-    display: none;
+    display: block;
 }
 .main
 {
-    display: block;
+    display: none;
     position: absolute;
     top:0px;
     left:0px;
@@ -548,6 +548,11 @@ a
 }
 @media(max-width:420px)
 {
+    .store__col
+    {
+        grid-template-columns: repeat(3,1fr);
+        width:280px;
+    }
     .main__prewiew
     {
         font-size:45px;
