@@ -356,11 +356,11 @@ a
 }
 .score
 {
-    display: block;
+    display: none;
 }
 .main
 {
-    display: none;
+    display: block;
     position: absolute;
     top:0px;
     left:0px;
