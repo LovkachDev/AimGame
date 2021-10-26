@@ -19,8 +19,17 @@ function Click ()
     localStorage.setItem('CurrentBalance', CurrentBalance);
 
     document.getElementById('balance').innerHTML = localStorage.getItem('CurrentBalance');
-    
+    return score;
 }
+
+function Get()
+{
+    var sv = Click();
+    console.log(sv);
+}
+Get();
+
+
 function ScoreLayer()
 {
     document.getElementById('stats').style.display = 'block';
