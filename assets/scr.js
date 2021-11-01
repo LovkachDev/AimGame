@@ -3,6 +3,7 @@ scrW  = window.innerWidth - 100;
 let score = 0;
 function Click ()
 {
+    PlaySound();
     score++;
     let randX = Math.floor(Math.random() * scrW);
     let randY = Math.floor(Math.random() * 500);
@@ -15,7 +16,6 @@ function Click ()
     CurrentBalance ++;
     localStorage.setItem('CurrentBalance', CurrentBalance);
     document.getElementById('balance').innerHTML = localStorage.getItem('CurrentBalance');
-    PlaySound();
 }
 
 
