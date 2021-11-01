@@ -1,6 +1,6 @@
 scrW  = window.innerWidth - 100;
+
 let score = 0;
-let CurrentBalance = 0;
 function Click ()
 {
     score++;
@@ -11,23 +11,12 @@ function Click ()
     document.getElementById('otpt').innerHTML = score;
     document.getElementById("btn").style.left = pxX;
     document.getElementById("btn").style.top = pxY;
-
     let CurrentBalance = localStorage.getItem('CurrentBalance');
-    
     CurrentBalance ++;
-
     localStorage.setItem('CurrentBalance', CurrentBalance);
-
     document.getElementById('balance').innerHTML = localStorage.getItem('CurrentBalance');
-    return score;
+    PlaySound();
 }
-
-function Get()
-{
-    var sv = Click();
-    console.log(sv);
-}
-Get();
 
 
 function ScoreLayer()
@@ -50,7 +39,7 @@ let arr = [ "vova" , {bg : "linear-gradient(to right, #f00, #ffa500, #ff0, #0080
             "журкин" , {bg : "-webkit-linear-gradient(45deg, #fb8a61,#f74d72,#d2089a,#7029c9)"}  , { disc : "градиент"} , 
             "lovkach" , {bg : "linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706)"} , { disc : "градиент"} ,
             "уник123" , {bg : "url(https://i.ibb.co/N9K63Sd/image.png)"} , { disc : "кота в кепке"} , //кот в кепке
-            "1000" , {bg : "-webkit-linear-gradient(90deg, #ddee44,#ff4420)"} , { disc : "Шарик за 1000"} , 
+            "300" , {bg : "-webkit-linear-gradient(90deg, #ddee44,#ff4420)"} , { disc : "Шарик за 1000"} , 
             "lierow" , {bg : "url(https://i.ibb.co/YTWtpbc/image.png)"} , { disc : "Мем лицо"}, // лицо мем
             "slavaukraine" , {bg : "url(https://i.ibb.co/X3td9P4/image.png)"} , { disc : "Шар с украиной"} , //украина
             "standa1one" , {bg : "url(https://i.ibb.co/bzT6VN9/animation-gif.gif)"} , { disc : "Шар с мем гифкой"},// гиф сига
@@ -75,4 +64,9 @@ function Promo()
         promo.value = 'Неправильный код';
     }
 }
-
+function PlaySound()
+{
+    let sound = new Audio("assets/sound.mp3");
+    sound.volume = 0.3;
+    sound.play();
+}

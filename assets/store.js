@@ -27,7 +27,7 @@ function CloseModal()
 function BuyRedPlayer()
 {
     check = localStorage.getItem("CurrentBalance");
-    if ( check < 250 )
+    if ( check < 50 )
     {
         document.getElementById("errorRed").innerHTML = "Недостаточно баланса";
     }
@@ -35,14 +35,14 @@ function BuyRedPlayer()
     {
         red = document.getElementById('btn').style.background = '#fc5858';
         localStorage.setItem("Player" , red);
-        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 250)
+        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 50)
         CloseModal();
     }         
 }
 function BuyGreenPlayer()
 {
     check = localStorage.getItem("CurrentBalance");
-    if ( check < 250 )
+    if ( check < 50 )
     {
         document.getElementById("errorGreen").innerHTML = "Недостаточно баланса";
     }
@@ -50,14 +50,14 @@ function BuyGreenPlayer()
     {
         green = document.getElementById('btn').style.background = '#b1f55d';
         localStorage.setItem("Player" , green);
-        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 250)
+        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 50)
         CloseModal();
     }         
 }
 function BuyPurplePlayer()
 {
     check = localStorage.getItem("CurrentBalance");
-    if ( check < 250 )
+    if ( check < 50 )
     {
         document.getElementById("errorPurple").innerHTML = "Недостаточно баланса";
     }
@@ -65,14 +65,14 @@ function BuyPurplePlayer()
     {
         purple = document.getElementById('btn').style.background = '#ae5df5';
         localStorage.setItem("Player" , purple);
-        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 250)
+        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 50)
         CloseModal();
     }         
 }
 function BuyGradOnePlayer()
 {
     check = localStorage.getItem("CurrentBalance");
-    if ( check < 250 )
+    if ( check < 300 )
     {
         document.getElementById("errorGradOne").innerHTML = "Недостаточно баланса";
     }
@@ -80,7 +80,7 @@ function BuyGradOnePlayer()
     {
         GradOne = document.getElementById('btn').style.background = '-webkit-linear-gradient(90deg, #ddee44,#ff4420)';
         localStorage.setItem("Player" , GradOne);
-        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 1000)
+        localStorage.setItem('CurrentBalance' , localStorage.getItem('CurrentBalance') - 300)
         CloseModal();
     }         
 }
