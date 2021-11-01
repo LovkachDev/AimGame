@@ -1,9 +1,8 @@
 scrW  = window.innerWidth - 100;
-
+let isClick = false;
 let score = 0;
-function Click ()
+function Click()
 {
-    PlaySound();
     score++;
     let randX = Math.floor(Math.random() * scrW);
     let randY = Math.floor(Math.random() * 500);
@@ -64,9 +63,9 @@ function Promo()
         promo.value = 'Неправильный код';
     }
 }
-function PlaySound()
+let sound = new Audio("assets/sound.mp3");
+sound.volume = 0.3;
+while (Click() == true )
 {
-    let sound = new Audio("assets/sound.mp3");
-    sound.volume = 0.3;
     sound.play();
 }
