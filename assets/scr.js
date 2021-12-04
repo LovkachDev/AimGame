@@ -63,9 +63,3 @@ function Promo()
         promo.value = 'Неправильный код';
     }
 }
-let sound = new Audio("assets/sound.mp3");
-sound.volume = 0.3;
-while (Click() == true )
-{
-    sound.play();
-}
