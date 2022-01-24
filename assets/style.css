@@ -362,6 +362,14 @@ a
 {
     display: none;
 }
+.bestscore
+{
+    position: relative;
+    margin-top:20px;
+    color:#fff;
+    font-weight: 700;
+    font-size:23px;
+}
 .main
 {
     display: block;
